@@ -9,29 +9,29 @@ $texto = strtolower($texto);
 // Separar en palabras.
 $palabras = explode(" ", $texto);
 // Ignorar palabras de menos de 3 letras.
-$palabrasIgnoradas = [];
+$palabrasSeleccionadas = [];
 
 foreach ($palabras as $palabra) {
   if (strlen($palabra) >= 3) {
-    $palabrasIgnoradas[] = $palabra;
+    $palabrasSeleccionadas[] = $palabra;
   }
 }
 
-$totalPalabras = count($palabrasIgnoradas)
+$totalPalabras = count($palabrasSeleccionadas);
 
 // 3. Contar cuántas veces aparece cada palabra.
-$contadorPalabras = array_count_values($palabrasIgnoradas);
+$contadorPalabras = array_count_values($palabrasSeleccionadas);
 
 // 4. Palabras que aparecen más de una vez (repetidas).
 foreach ($contadorPalabras as $palabra => $numero) {
   if ($numero > 1) {
-    echo $palabra . " " . $numero . " veces" . "<br>";
+    echo $palabra . " " . "aparece" .  $numero . " veces en total" . "<br>";
   }
 }
 
 // 5. Palabra que más veces se repite.
-$maxRep = max($numero);
-$palabraMasRepetida = array_search($maxRep, $numero);
+$maxRep = max($contadorPalabras);
+$palabraMasRepetida = array_search($maxRep, $contadorPalabras);
 
 echo "Número total de palabras: " . $totalPalabras . "<br>";
 echo "Palabra más repetida: " . $palabraMasRepetida;

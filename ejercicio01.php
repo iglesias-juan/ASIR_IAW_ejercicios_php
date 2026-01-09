@@ -34,8 +34,8 @@ foreach ($estudiantes as $nombre => $notas) {
   // Calcula la media
   $media = calcularPromedio($notas);
   // Muestra el nombre del estudiante y la media
-  echo "Estudiante: " . $nombre<br>;
-  echo "Nota Media: " . number_format($media, 1) . <br>;
+  echo "Estudiante: " . $nombre . "<br>";
+  echo "Nota Media: " . number_format($media, 1) . "<br>";
   // Comprueba si está aprobado o suspenso
   if ($media >= 6) {
     echo "Calificación: Aprobado<br>";
@@ -52,3 +52,6 @@ foreach ($estudiantes as $nombre => $notas) {
 }
 
 // 4. Total de aprobados y suspensos.
+
+echo "Número de Aprobados: " . $aprobados . "<br>";
+echo "Número de Suspensos: " . $suspensos . "<br>";

@@ -60,3 +60,5 @@ echo "Total sin descuento: " . number_format($total, 2) . " €" . "<br>";
 echo "Descuento aplicado: " . number_format($descuento, 2) . " €" . "<br>";
 // 7. Total final.
 echo "Total final: " . number_format($totalFinal, 2) . " €";
+
+?>

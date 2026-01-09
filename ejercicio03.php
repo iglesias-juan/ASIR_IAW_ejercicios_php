@@ -30,3 +30,10 @@ foreach ($contadorPalabras as $palabra => $numero) {
 }
 
 // 5. Palabra que más veces se repite.
+$maxRep = max($numero);
+$palabraMasRepetida = array_search($maxRep, $numero);
+
+echo "Número total de palabras: " . $totalPalabras . "<br>";
+echo "Palabra más repetida: " . $palabraMasRepetida;
+
+?>

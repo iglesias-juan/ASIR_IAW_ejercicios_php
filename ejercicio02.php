@@ -38,3 +38,17 @@ function calcularTotal($carrito) {
   // Resultado
   return $total;
 }
+
+$total = calcularTotal($carrito);
+
+// 4. Cálculo del total sin descuento, descuento aplicado y total final.
+
+$descuento = 0; // Variable para el descuento
+// Descuentos
+if ($total > 1000) {
+  $descuento = $total * 0.10; // Aplicando un descuento del 10%
+} elseif ($total > 500) {
+  $descuento = $total * 0.05; // Aplicando un descuento del 5%
+}
+// Total con descuento
+$totalFinal = $total - $descuento;

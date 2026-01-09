@@ -50,5 +50,13 @@ if ($total > 1000) {
 } elseif ($total > 500) {
   $descuento = $total * 0.05; // Aplicando un descuento del 5%
 }
-// Total con descuento
+// Variable total con descuento
 $totalFinal = $total - $descuento;
+
+// 5. Total sin descuento.
+
+echo "Total sin descuento: " . number_format($total, 2) . " €" . "<br>";
+// 6. Descuento aplicado.
+echo "Descuento aplicado: " . number_format($descuento, 2) . " €" . "<br>";
+// 7. Total final.
+echo "Total final: " . number_format($totalFinal, 2) . " €";

@@ -55,3 +55,9 @@ foreach ($estudiantes as $nombre => $notas) {
 
 echo "Número de Aprobados: " . $aprobados . "<br>";
 echo "Número de Suspensos: " . $suspensos . "<br>";
+
+// 5. Mejor estudiante.
+
+echo "El mejor estudiante: " . $mejorEstudiante . "con una nota media de " . number_format($mejorMedia, 1);
+
+?>

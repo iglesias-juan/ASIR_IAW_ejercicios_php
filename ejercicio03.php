@@ -20,3 +20,13 @@ foreach ($palabras as $palabra) {
 $totalPalabras = count($palabrasIgnoradas)
 
 // 3. Contar cuántas veces aparece cada palabra.
+$contadorPalabras = array_count_values($palabrasIgnoradas);
+
+// 4. Palabras que aparecen más de una vez (repetidas).
+foreach ($contadorPalabras as $palabra => $numero) {
+  if ($numero > 1) {
+    echo $palabra . " " . $numero . " veces" . "<br>";
+  }
+}
+
+// 5. Palabra que más veces se repite.

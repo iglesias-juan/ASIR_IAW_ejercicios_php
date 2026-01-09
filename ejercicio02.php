@@ -22,3 +22,19 @@ foreach ($carrito as $articulo) {
   echo "Cantidad: " . $articulo["cantidad"] . "<br>";
   echo "Subtotal: " . number_format($subtotal, 2) . " €" . "<br>";
 }
+
+// 3. Cálculo del total general.
+// Se utilizará una función para calcular el total del carrito, esto es, la suma de los subtotales de cada producto.
+// Función: calcularTotal($carrito).
+
+function calcularTotal($carrito) {
+  // Inicio
+  $total = 0;
+  // Bucle
+  foreach ($carrito as $articulo) {
+    $subtotal = $articulo["precio"] * $articulo["cantidad"];
+    $total += $subtotal;
+  }
+  // Resultado
+  return $total;
+}

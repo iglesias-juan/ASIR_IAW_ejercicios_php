@@ -16,7 +16,7 @@ $carrito = [
 foreach ($carrito as $articulo) {
   // Calcula el subtotal de cada articulo
   $subtotal = $articulo["precio"] * $articulo["cantidad"];
-  // Información
+  // Información de cada producto con nombre, precio unitario, cantidad y subtotal
   echo "Nombre: " . $articulo["producto"] . "<br>";
   echo "Precio unitario: " . number_format($articulo["precio"], 2) . " €" . "<br>";
   echo "Cantidad: " . $articulo["cantidad"] . "<br>";
@@ -28,7 +28,7 @@ foreach ($carrito as $articulo) {
 // Función: calcularTotal($carrito).
 
 function calcularTotal($carrito) {
-  // Inicio
+  // Inicio (empieza en 0)
   $total = 0;
   // Bucle
   foreach ($carrito as $articulo) {
@@ -38,13 +38,13 @@ function calcularTotal($carrito) {
   // Resultado
   return $total;
 }
-
+// Llamada a la función
 $total = calcularTotal($carrito);
 
 // 4. Cálculo del total sin descuento, descuento aplicado y total final.
-
+// Cálculo del descuento
 $descuento = 0; // Variable para el descuento
-// Descuentos
+// Condiciones de descuento
 if ($total > 1000) {
   $descuento = $total * 0.10; // Aplicando un descuento del 10%
 } elseif ($total > 500) {

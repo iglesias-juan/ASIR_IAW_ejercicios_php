@@ -1,5 +1,31 @@
 <?php
 
+/*
+Ejercicio 2: Simulador de carrito de compras. 
+  Crea un carrito de compras con este formato: 
+    $carrito = [ 
+      ["producto" => "Portátil", "precio" => 1200, "cantidad" => 1], 
+      ["producto" => "Ratón", "precio" => 25, "cantidad" => 2], 
+      ["producto" => "Teclado", "precio" => 45, "cantidad" => 1], 
+      ]; 
+  El programa debe: 
+    1. Mostrar cada producto con: 
+      • Nombre. 
+      • Precio unitario. 
+      • Cantidad. 
+      • Subtotal (precio * cantidad). 
+    2. Calcular el total general. 
+    3. Aplicar descuentos: 
+      • Si el total > 1000 → 10% de descuento. 
+      • Si el total > 500 → 5% de descuento. 
+      • Si no → sin descuento. 
+    4. Mostrar: 
+      • Total sin descuento. 
+      • Descuento aplicado. 
+      • Total final. 
+    5. Usa una función calcularTotal($carrito).
+*/
+
 // 1. Array del carrito.
 
 $carrito = [
